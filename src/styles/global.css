@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap");
+@import "tailwindcss";
+
+
+@layer base {
+  html,
+  body {
+    @apply overflow-x-hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+
+/* hide scrollbar but keep scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
