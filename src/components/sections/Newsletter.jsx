@@ -12,41 +12,39 @@ const Newsletter = () => {
 
   const handleSubmit = () => {
     const cleanEmail = sanitizeInput(email);
-
     if (!isValidEmail(cleanEmail)) return;
-
     subscribe(cleanEmail);
   };
 
   return (
     <section
-      className="h-[420px] bg-cover bg-center relative"
+      className="h-[320px] sm:h-[360px] md:h-[420px] bg-cover bg-center relative"
       style={{ backgroundImage: `url(${newsletterBg})` }}
     >
       <div className="absolute inset-0 bg-black/30" />
 
-      <div className="relative max-w-[1440px] mx-auto px-[100px] h-full flex items-center">
-        <div className="text-white max-w-[558px] ml-auto">
-          <h2 className="font-saira text-[40px] font-semibold leading-[135%]">
+      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-[100px] h-full flex items-center">
+        <div className="text-white w-full max-w-[558px] ml-0 md:ml-auto">
+          <h2 className="font-saira text-[24px] sm:text-[32px] md:text-[40px] font-semibold leading-[135%]">
             Get more discount <br /> Off your order
           </h2>
 
-          <p className="font-saira text-[20px] opacity-80 mt-2 mb-6">
+          <p className="font-saira text-[14px] sm:text-[18px] md:text-[20px] opacity-80 mt-2 mb-6">
             Join our mailing list
           </p>
 
-          <div className="flex w-[558px] gap-[22px]">
+          <div className="flex flex-col sm:flex-row w-full gap-3 sm:gap-[22px]">
             <Input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
-              className="w-[384px]"
+              className="w-full sm:w-[384px]"
             />
 
             <Button
               onClick={handleSubmit}
               disabled={loading}
-              className="w-[152px]"
+              className="w-full sm:w-[152px]"
             >
               {loading ? "Loading..." : "Shop Now"}
             </Button>
