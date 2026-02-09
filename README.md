@@ -84,5 +84,5 @@ Project dideploy menggunakan Vercel.
 
 Author
 
-Nama: (isi nama kamu)
+Nama: Rulif Fadria Nirwansyah 
 Batch: Front-End React Batch 3
